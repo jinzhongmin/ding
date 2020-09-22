@@ -1,0 +1,18 @@
+global:
+  # routePath 请与alertmanager中url的路径配置一致
+  routePath: '/'
+  # listenPort 本地监听的端口，请与alertmanager中url的端口配置一致
+  listenPort: '5001'
+
+ding:
+  # token 钉钉机器人的token
+  token: 'xxxxxxxxx'
+  # title 钉钉告警通知的标题, 正文不显示
+  title: '告警通知'
+  msgFormat: 
+    # msgType text, markdown
+    msgType: 'markdown'
+    # msgHead 每条通知的头部显示, 可自定义 
+    msgHead: '来自 Prometheus 的告警通知\n++++++\n\n'
+    # msgBodyTpl 告警的显示模板, 可自定义
+    msgBodyTpl: './alert.tpl'
